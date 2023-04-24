@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="{{url_for('static', filename='uploads/' + filename)}}">
+
+    <h1> {{message}} </h1>
+
+    {% if filename %}
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}">
+    {% endif %}
 </body>
 </html>
